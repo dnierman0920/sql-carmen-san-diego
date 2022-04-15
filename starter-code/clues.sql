@@ -52,6 +52,12 @@
 --  SELECT name FROM countries WHERE code = 'SMR';
 --  SELECT name FROM cities WHERE countrycode = 'SMR' AND NOT name = 'San Marino';
 
+-- Updated Query using JOIN
+-- SELECT cities.name
+-- FROM countries 
+-- JOIN cities ON countries.code = cities.countrycode
+-- WHERE countries.code = 'SMR' AND NOT cities.name = 'San Marino'
+
 -- ###########  ANSWER  ############
 --     name    
 -- ------------
@@ -89,13 +95,18 @@
 --  FROM cities
 --  WHERE id = 211
 
+-- updated query with using join
+
+-- SELECT cities.name
+-- FROM cities
+-- JOIN countries on countries.code = cities.countrycode
+-- WHERE countries.capital = cities.id and countries.name = 'Brazil'
+
 -- ###########  ANSWER  ############
 --     name   
 -- ----------
 --  Bras�lia
 -- (1 row)
-
-
 
 
 -- Clue #7: She knows we're on to her – her taxi dropped her off at the international airport, and she beat us to
@@ -123,9 +134,10 @@
 --  Santa Monica |      91084
 
 
-
 -- We're counting on you, gumshoe. Find out where she's headed, send us the info, and we'll be sure to meet her at the gates with bells on.
 
 
-
 -- She's in _____________Santa Monica_______________!
+
+-- TESTING SOME JOINS
+
