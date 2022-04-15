@@ -81,13 +81,13 @@
  -- the capital! Look up the country's capital, and get there pronto! Send us the name of where you're headed and we'll
  -- follow right behind you!
 
- SELECT capital
- FROM countries
- WHERE name = 'Brazil';
+--  SELECT capital
+--  FROM countries
+--  WHERE name = 'Brazil';
 
- SELECT name
- FROM cities
- WHERE id = 211
+--  SELECT name
+--  FROM cities
+--  WHERE id = 211
 
 -- ###########  ANSWER  ############
 --     name   
@@ -104,6 +104,7 @@
 -- Lucky for us, she's getting cocky. She left us a note, and I'm sure she thinks she's very clever, but
 -- if we can crack it, we can finally put her where she belongs – behind bars.
 
+
 -- Our play date of late has been unusually fun –
 -- As an agent, I'll say, you've been a joy to outrun.
 -- And while the food here is great, and the people – so nice!
@@ -112,8 +113,19 @@
 -- In a city of ninety-one thousand and now, eighty five.
 
 
+-- SELECT name, population
+-- FROM cities
+-- WHERE population = 91084
+
+-- ###########  ANSWER  ############
+--      name     | population 
+-- --------------+------------
+--  Santa Monica |      91084
+
+
+
 -- We're counting on you, gumshoe. Find out where she's headed, send us the info, and we'll be sure to meet her at the gates with bells on.
 
 
 
--- She's in ____________________________!
+-- She's in _____________Santa Monica_______________!
