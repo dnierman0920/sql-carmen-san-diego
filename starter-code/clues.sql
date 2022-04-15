@@ -2,11 +2,11 @@
 -- traveling through Southern Europe. She's most likely traveling someplace where she won't be noticed,
 -- so find the least populated country in Southern Europe, and we'll start looking for her there.
 
-SELECT name
-FROM countries
-WHERE region='Southern Europe'
-ORDER BY population
-LIMIT 1;
+-- SELECT name
+-- FROM countries
+-- WHERE region='Southern Europe'
+-- ORDER BY population
+-- LIMIT 1;
 
 -- ###########  ANSWER  ############
 --               name               
@@ -20,8 +20,7 @@ LIMIT 1;
 -- spoken in this country, so we can call in a translator to work with you.
 SELECT language
 FROM countrylanguages
-WHERE countrycode = (SELECT code FROM countries WHERE region='Southern Europe' ORDER BY population LIMIT 1;)
-
+WHERE countrycode = (SELECT code FROM countries WHERE region='Southern Europe' ORDER BY population LIMIT 1);
 
 
 -- Clue #3: We have new news on the classes Carmen attended – our gumshoes tell us she's moved on
