@@ -63,12 +63,38 @@
 -- parts of the globe! She's headed to South America as we speak; go find a city whose name is like the one we were
 -- headed to, but doesn't end the same. Find out the city, and do another search for what country it's in. Hurry!
 
-SELECT name, countrycode FROM cities WHERE name LIKE 'Serra%' AND NOT name = 'Serravalle';
-SELECT name FROM countries where code='BRA'
+-- SELECT name, countrycode FROM cities WHERE name LIKE 'Serra%' AND NOT name = 'Serravalle';
+-- SELECT name FROM countries where code='BRA'
+
+-- ###########  ANSWER  ############
+--  name  | countrycode 
+-- -------+-------------
+--  Serra | BRA
+-- (1 row)
+
+--   name  
+-- --------
+--  Brazil
+-- (1 row)
 
 -- Clue #6: We're close! Our South American agent says she just got a taxi at the airport, and is headed towards
  -- the capital! Look up the country's capital, and get there pronto! Send us the name of where you're headed and we'll
  -- follow right behind you!
+
+ SELECT capital
+ FROM countries
+ WHERE name = 'Brazil';
+
+ SELECT name
+ FROM cities
+ WHERE id = 211
+
+-- ###########  ANSWER  ############
+--     name   
+-- ----------
+--  Bras�lia
+-- (1 row)
+
 
 
 
