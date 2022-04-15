@@ -35,7 +35,7 @@
 -- to a different country, a country where people speak only the language she was learning. Find out which
 --  nearby country speaks nothing but that language.
 
-SELECT countrycode FROM countrylanguages WHERE language = 'Italian' AND percentage = 100;
+-- SELECT countrycode FROM countrylanguages WHERE language = 'Italian' AND percentage = 100;
 
 -- -- ###########  ANSWER  ############
 --  countrycode 
@@ -49,13 +49,22 @@ SELECT countrycode FROM countrylanguages WHERE language = 'Italian' AND percenta
  -- would be too obvious. We're following our gut on this one; find out what other city in that country she might
  --  be flying to.
 
+--  SELECT name FROM countries WHERE code = 'SMR';
+--  SELECT name FROM cities WHERE countrycode = 'SMR' AND NOT name = 'San Marino';
+
+-- ###########  ANSWER  ############
+--     name    
+-- ------------
+--  Serravalle
+-- (1 row)
 
 
 -- Clue #5: Oh no, she pulled a switch – there are two cities with very similar names, but in totally different
 -- parts of the globe! She's headed to South America as we speak; go find a city whose name is like the one we were
 -- headed to, but doesn't end the same. Find out the city, and do another search for what country it's in. Hurry!
 
-
+SELECT name, countrycode FROM cities WHERE name LIKE 'Serra%' AND NOT name = 'Serravalle';
+SELECT name FROM countries where code='BRA'
 
 -- Clue #6: We're close! Our South American agent says she just got a taxi at the airport, and is headed towards
  -- the capital! Look up the country's capital, and get there pronto! Send us the name of where you're headed and we'll
